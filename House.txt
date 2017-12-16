@@ -1,0 +1,20 @@
+Housing Price estimation:
+
+
+DATASET GENERATION:
+
+With the help of Regular Expression and string manipulation extracted all the features from given text file.Python dictionary was made of key as House ID and corresponding features as values,and from this Dictionary generated a csv file,and finally separated Train and Test data on basis of price column in the csv file.
+
+DATA-CLEANING:
+
+In the given text file some of the feature were missing for some datapoint hence filled these missing values with corresponding columns mean .
+
+Features like King's Visit and Space for farm in front of House had mostly same values (in 99% ) so these were least significant for prediction hence removed these two features from training dataset.
+
+For catagorical values like Location of House and Builders name applid mapping with numerical values .
+
+Distance from Knight and Distance from Capital were 100% correlated hence removed one of threse from the traing data.
+
+MODEL-SELECTION:
+
+Started with RandomForestRegressor later found LinearRegression was performing better than RandomForestRegressor.
